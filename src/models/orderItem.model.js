@@ -40,11 +40,11 @@ const OrderItem = sequelize.define(
     },
   },
   {
-    tableName: "order_items",
+    tableName: "orderItem",
     timestamps: true,
     createdAt: "created_at",
-    updatedAt: false,
-  }
+    updatedAt: false
+  },
 );
 
 module.exports = OrderItem;

@@ -34,11 +34,11 @@ const Order = sequelize.define(
     },
   },
   {
-    tableName: "orders",
+    tableName: "order",
     timestamps: true,
     createdAt: "created_at",
-    updatedAt: false,
-  }
+    updatedAt: "updated_at",
+  },
 );
 
 module.exports = Order;

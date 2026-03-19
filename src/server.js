@@ -3,7 +3,7 @@ const sequelize = require("./config/database");
 const app = require("./app");
 require("./models");
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
 async function startServer() {
   try {
@@ -12,12 +12,12 @@ async function startServer() {
     await sequelize.authenticate();
     console.log("✅ Database connected");
 
-    try {
-        await sequelize.sync({ alter: true });
-        console.log("Tables synced");
-    } catch (error) {
-        console.log("Tables synced errorrrrrr", error);
-    }
+    // try {
+    //     await sequelize.sync({ alter: true });
+    //     console.log("Tables synced");
+    // } catch (error) {
+    //     console.log("Tables synced errorrrrrr", error);
+    // }
 
     app.listen(PORT, () => {
       console.log(`🚀 Server running on port ${PORT}`);

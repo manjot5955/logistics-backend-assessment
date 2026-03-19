@@ -18,7 +18,7 @@ const Product = sequelize.define(
       unique: true,
       allowNull: false,
     },
-    stock_qty: {
+    stock: {
       type: DataTypes.INTEGER,
       allowNull: false,
       defaultValue: 0,
@@ -33,7 +33,7 @@ const Product = sequelize.define(
     timestamps: true,
     createdAt: "created_at",
     updatedAt: false,
-  }
+  },
 );
 
 module.exports = Product;
